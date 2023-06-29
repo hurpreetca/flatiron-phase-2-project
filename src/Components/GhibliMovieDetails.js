@@ -14,7 +14,7 @@ function GhibliMovieDetails() {
   return (
     <div>
       <h1> {selectedMovie.title}</h1>
-      <img src={selectedMovie.movie_banner} alt="Banner Not Loaded"></img>
+      <img src={selectedMovie.movie_banner} alt="Movie Banner"></img>
     </div>
   );
 }
