@@ -1,24 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
+import GhibliMoviePage from "./Components/GhibliMoviePage";
+import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+
+import React, { useEffect, useState } from "react";
+import GhibliMovieDetails from "./Components/GhibliMovieDetails";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/movies")
+      .then((res) => res.json())
+      .then((movie) => setMovies(movie));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Confirming this is working as expected </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/Movies">
+          <GhibliMoviePage movies={movies} />
+        </Route>
+        <Route exact path="/movies/:id">
+          <GhibliMovieDetails />
+        </Route>
+      </Switch>
     </div>
   );
 }
