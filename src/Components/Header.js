@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <div>
-      <h1>Studi Ghibli Archives</h1>
+      <h1>Studio Ghibli Archives</h1>
     </div>
   );
 }

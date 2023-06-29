@@ -1,10 +1,11 @@
 import "./App.css";
 import GhibliMoviePage from "./Components/GhibliMoviePage";
-import Form from "./Components/Form";
+import Form from "./Components/NewMovieForm";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 
 import React, { useEffect, useState } from "react";
 import GhibliMovieDetails from "./Components/GhibliMovieDetails";
+import NewMovieForm from "./Components/NewMovieForm";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ function App() {
           <GhibliMovieDetails />
         </Route>
         <Route exact path="/form">
-          <Form />
+          <NewMovieForm />
         </Route>
       </Switch>
     </div>
