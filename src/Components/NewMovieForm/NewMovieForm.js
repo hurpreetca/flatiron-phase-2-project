@@ -1,8 +1,8 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import { Segment, Form } from "semantic-ui-react";
 import "./NewMovieForm.css";
 
-function NewMovieForm(props) {
+function NewMovieForm({ onNewMovieSubmit }) {
   const [formData, setFormData] = useState({
     title: "",
     original_title: "",
@@ -37,7 +37,19 @@ function NewMovieForm(props) {
       running_time: formData.running_time,
       rt_score: formData.rt_score,
     };
-    console.log(newMovieData);
+    //console.log(newMovieData);
+
+    //POST request to update the list of movies
+    fetch("http://localhost:3000/movies", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newMovieData),
+    })
+      .then((res) => res.json())
+      .then((movie) => onNewMovieSubmit(movie));
   };
   return (
     <div>

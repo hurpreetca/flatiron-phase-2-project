@@ -13,6 +13,9 @@ function App() {
       .then((res) => res.json())
       .then((movie) => setMovies(movie));
   }, []);
+  function onNewMovieSubmit(newMovie) {
+    setMovies(...movies, newMovie);
+  }
   return (
     <div className="App">
       <Switch>
@@ -23,7 +26,7 @@ function App() {
           <GhibliMovieDetails />
         </Route>
         <Route exact path="/form">
-          <NewMovieForm />
+          <NewMovieForm onNewMovieSubmit={onNewMovieSubmit} />
         </Route>
       </Switch>
     </div>
