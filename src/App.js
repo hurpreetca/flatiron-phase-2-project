@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import NewMovieForm from "./Components/NewMovieForm/NewMovieForm";
 import React, { useEffect, useState } from "react";
 import GhibliMovieDetails from "./Components/GhibliMovieDetails";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -14,10 +15,11 @@ function App() {
       .then((movie) => setMovies(movie));
   }, []);
   function onNewMovieSubmit(newMovie) {
-    setMovies(...movies, newMovie);
+    setMovies([...movies, newMovie]);
   }
   return (
     <div className="App">
+      <Navbar />
       <Switch>
         <Route exact path="/movies">
           <GhibliMoviePage movies={movies} />

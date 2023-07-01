@@ -52,9 +52,10 @@ function NewMovieForm({ onNewMovieSubmit }) {
       .then((movie) => onNewMovieSubmit(movie));
   };
   return (
-    <div>
+    <div className="form-div">
+      <h2>Movie Form</h2>
       <Segment inverted>
-        <Form onSubmit={handleSubmit}>
+        <Form className="newMovieForm" onSubmit={handleSubmit}>
           <Form.Input
             fluid
             label="Title"
@@ -63,6 +64,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
             name="title"
             value={formData.title}
             onChange={handleChange}
+            required
           />
           <Form.Group widths="equal">
             <Form.Input
@@ -73,6 +75,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
               name="original_title"
               value={formData.original_title}
               onChange={handleChange}
+              required
             />
             <Form.Input
               fluid
@@ -82,6 +85,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
               name="original_title_romanised"
               value={formData.original_title_romanised}
               onChange={handleChange}
+              required
             />
           </Form.Group>
           <Form.Group widths="equal">
@@ -93,6 +97,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
               name="image"
               value={formData.image}
               onChange={handleChange}
+              required
             />
             <Form.Input
               fluid
@@ -102,6 +107,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
               name="movie_banner"
               value={formData.movie_banner}
               onChange={handleChange}
+              required
             />
           </Form.Group>
           <Form.TextArea
@@ -111,6 +117,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
             name="description"
             value={formData.description}
             onChange={handleChange}
+            required
           />
           <Form.Group widths="equal">
             <Form.Input
@@ -136,6 +143,8 @@ function NewMovieForm({ onNewMovieSubmit }) {
             <Form.Input
               fluid
               label="Release Year"
+              min="1950"
+              max="2023"
               placeholder="Release Year"
               type="number"
               name="release_year"
@@ -145,6 +154,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
             <Form.Input
               fluid
               label="Running Time"
+              min="0"
               placeholder="Running Time"
               type="number"
               name="running_time"
@@ -154,6 +164,8 @@ function NewMovieForm({ onNewMovieSubmit }) {
             <Form.Input
               fluid
               label="Rating"
+              min="0"
+              max="100"
               placeholder="Rating"
               type="number"
               name="rt_score"
