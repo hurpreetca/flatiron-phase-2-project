@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import NewMovieForm from "./Components/NewMovieForm/NewMovieForm";
 import React, { useEffect, useState } from "react";
 import GhibliMovieDetails from "./Components/GhibliMovieDetails";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [movies, setMovies] = useState([]);
