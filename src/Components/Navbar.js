@@ -1,7 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  return <div>This is the navbar</div>;
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/movies">Movies</Link>
+        </li>
+        <li>
+          <Link to="/form">Form</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
