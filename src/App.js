@@ -18,7 +18,7 @@ function App() {
     setMovies([...movies, newMovie]);
   }
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
       <Switch>
         <Route exact path="/movies">

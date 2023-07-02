@@ -3,7 +3,7 @@ import GhibliMovieCollection from "./GhibliMovieCollection";
 
 function GhibliMoviePage({ movies }) {
   return (
-    <div>
+    <div className="main_div">
       <GhibliMovieCollection movies={movies} />
     </div>
   );
