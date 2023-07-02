@@ -5,11 +5,13 @@
   margin-top: 10%;
 }
 .movie_card {
-  border-radius: 200px;
   overflow: hidden;
   box-shadow: 0 2p 20px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   transition: transform 200ms ease-in;
+}
+.content {
+  text-align: center;
 }

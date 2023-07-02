@@ -5,7 +5,7 @@ import NewMovieForm from "./Components/NewMovieForm/NewMovieForm";
 import React, { useEffect, useState } from "react";
 import GhibliMovieDetails from "./Components/GhibliMovieDetails";
 import Navbar from "./Components/Navbar/Navbar";
-
+import Home from "./Components/Home/Home";
 function App() {
   const [movies, setMovies] = useState([]);
 
@@ -21,6 +21,9 @@ function App() {
     <div className="app">
       <Navbar />
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route exact path="/movies">
           <GhibliMoviePage movies={movies} />
         </Route>
