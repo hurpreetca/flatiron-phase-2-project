@@ -13,7 +13,26 @@ body {
 li {
   list-style: none;
 }
-Link {
+.nav-link,
+.brand {
   text-decoration: none;
-  color: Red;
+  color: darkgray;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: rgb(0, 28, 73);
+}
+.nav_brand {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+.nav_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
 }
