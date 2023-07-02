@@ -10,7 +10,6 @@ function GhibliMovieCard({ id, title, original_title, image }) {
 
   return (
     <Card className="movie_card" key={id} onClick={(e) => handleClick(id)}>
-      <Card.Content extra></Card.Content>
       <img src={image} alt="Oh Snap!" />
       <Card.Content className="content">
         <Card.Header>{title}</Card.Header>

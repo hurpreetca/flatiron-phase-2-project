@@ -25,12 +25,12 @@ li {
   height: 8vh;
   background: rgb(0, 28, 73);
 }
-.nav_brand {
+.nav-brand {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 1.7rem;
 }
-.nav_menu {
+.nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-around;

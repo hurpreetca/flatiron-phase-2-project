@@ -4,21 +4,21 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="nav">
-      <Link to="/" className="nav_brand">
+      <Link to="/" className="nav-brand">
         Ghibli Archives
       </Link>
-      <ul className="nav_menu">
-        <li className="nav_item">
+      <ul className="nav-menu">
+        <li className="nav-item">
           <Link to="/" className="nav-link">
             Home
           </Link>
         </li>
-        <li className="nav_item">
+        <li className="nav-item">
           <Link to="/movies" className="nav-link">
             Movies
           </Link>
         </li>
-        <li className="nav_item">
+        <li className="nav-item">
           <Link to="/form" className="nav-link">
             Form
           </Link>

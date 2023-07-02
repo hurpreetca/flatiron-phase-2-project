@@ -1,16 +1,19 @@
 .app {
   background-image: url(https://www.ghibli.jp/images/yamada1.jpg);
+  /* background-color: red; */
+  height: 100vh;
 }
+
 .main_div {
   margin-top: 10%;
 }
 .movie_card {
   overflow: hidden;
-  box-shadow: 0 2p 20px;
-  display: flex;
-  justify-content: space-between;
   cursor: pointer;
   transition: transform 200ms ease-in;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
 }
 .content {
   text-align: center;
