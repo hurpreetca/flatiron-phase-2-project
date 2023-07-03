@@ -2,6 +2,7 @@
   background-image: url(https://www.ghibli.jp/images/yamada1.jpg);
   /* background-color: red; */
   height: 100vh;
+  background-attachment: scroll;
 }
 
 .main_div {
