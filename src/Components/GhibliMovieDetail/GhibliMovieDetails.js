@@ -37,7 +37,7 @@ function GhibliMovieDetails() {
         <br />
         <br />
         <br />
-        <Card centered raised color="red">
+        <Card centered raised>
           <Card className="movie-detail-card" color="violet">
             <Card.Content>
               <br />
@@ -63,39 +63,35 @@ function GhibliMovieDetails() {
             </Card.Header>
           </Card>
           <Card color="blue">
-            <Card.Content>
-              <b>{selectedMovie.description}</b>
+            <Card.Content textAlign="center">
+              <b>Description: </b>
+              <br />
+              {selectedMovie.description}
             </Card.Content>
+          </Card>
+          <Card color="teal">
+            <Card.Header textAlign="center">
+              <br />
+              <b>Release Year: {selectedMovie.release_year}</b>
+              <br />
+              <b>Runtime: {selectedMovie.running_time} mins</b>
+              <br />
+              <b>Rating: {selectedMovie.rt_score}%</b>
+              <br />
+              <br />
+            </Card.Header>
           </Card>
         </Card>
       </Grid.Column>
       <Grid.Column width={4}>
         <br />
-        <br />
+
         <br />
         <br />
         <br />
         <Image src={selectedMovie.image} size="large" circular />
       </Grid.Column>
     </Grid>
-
-    // <div className="body">
-    //   <div className="row">
-    //     <div className="left">
-    //       <img
-    //         src={selectedMovie.movie_banner}
-    //         alt="Movie Banner"
-    //         size="medium"
-    //       ></img>
-    //     </div>
-    //     <div className="right">
-    //       <div className="content">
-    //         <span>{selectedMovie.title}</span>
-    //         <p>{selectedMovie.description}</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
