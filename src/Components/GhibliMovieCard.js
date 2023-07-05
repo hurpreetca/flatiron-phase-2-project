@@ -9,7 +9,12 @@ function GhibliMovieCard({ id, title, original_title, image }) {
   }
 
   return (
-    <Card className="movie_card" key={id} onClick={(e) => handleClick(id)}>
+    <Card
+      className=".ui.card"
+      color="red"
+      key={id}
+      onClick={(e) => handleClick(id)}
+    >
       <img src={image} alt="Oh Snap!" />
       <Card.Content className="content" style={{ circularRadius: "500rem" }}>
         <Card.Header>{title}</Card.Header>

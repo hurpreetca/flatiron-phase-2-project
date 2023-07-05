@@ -55,7 +55,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
     <div className="form-div">
       <h2>Movie Form</h2>
 
-      <Form className="movie-form" onSubmit={handleSubmit}>
+      <Form className="movie-form" size="massive" onSubmit={handleSubmit}>
         <Form.Input
           fluid
           label="Title"
@@ -173,7 +173,9 @@ function NewMovieForm({ onNewMovieSubmit }) {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Button>Submit</Form.Button>
+        <Form.Button fluid circular color="instagram">
+          Submit
+        </Form.Button>
       </Form>
     </div>
   );
