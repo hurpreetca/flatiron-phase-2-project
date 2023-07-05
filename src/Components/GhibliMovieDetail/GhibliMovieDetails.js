@@ -37,8 +37,8 @@ function GhibliMovieDetails() {
         <br />
         <br />
         <br />
-        <Card centered raised>
-          <Card className="movie-detail-card" color="violet">
+        <Card className="movie-detail-card" centered raised>
+          <Card className="movie-title-card" color="violet">
             <Card.Content>
               <br />
             </Card.Content>
