@@ -53,7 +53,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
   };
   return (
     <div className="form-div">
-      <h2>Movie Form</h2>
+      <h1>ADD NEW MOVIE</h1>
 
       <Form className="movie-form" size="massive" onSubmit={handleSubmit}>
         <Form.Input

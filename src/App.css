@@ -1,8 +1,8 @@
 .app {
   background-image: url(https://www.ghibli.jp/images/yamada1.jpg);
   /* background-color: red; */
-  height: 100vh;
-  background-attachment: scroll;
+  background-size: cover;
+  background-position: fixed;
   color: rgba(83, 93, 144, 0.991);
 }
 
