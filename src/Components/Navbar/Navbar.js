@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { SiThemoviedatabase } from "react-icons/si";
 function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="nav-brand">
-        Ghibli Archives
+        <SiThemoviedatabase className="logo" />
+        GHIBLI
       </Link>
       <ul className="nav-menu">
         <li className="nav-item">

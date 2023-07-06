@@ -9,14 +9,12 @@
 .main_div {
   margin-top: 10%;
 }
-.movie_card {
+.movie-card {
   overflow: hidden;
   cursor: pointer;
   transition: transform 200ms ease-in;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
 }
-.content {
+
+.movie-card-content {
   text-align: center;
 }

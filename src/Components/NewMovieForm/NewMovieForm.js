@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "semantic-ui-react";
+import { Form, Segment } from "semantic-ui-react";
 import "./NewMovieForm.css";
 
 function NewMovieForm({ onNewMovieSubmit }) {
@@ -37,6 +37,19 @@ function NewMovieForm({ onNewMovieSubmit }) {
       running_time: formData.running_time,
       rt_score: formData.rt_score,
     };
+    setFormData({
+      title: "",
+      original_title: "",
+      original_title_romanised: "",
+      image: "",
+      movie_banner: "",
+      description: "",
+      director: "",
+      producer: "",
+      release_year: "",
+      running_time: "",
+      rt_score: "",
+    });
     //console.log(newMovieData);
 
     //POST request to update the list of movies
@@ -53,130 +66,133 @@ function NewMovieForm({ onNewMovieSubmit }) {
   };
   return (
     <div className="form-div">
-      <h1>ADD NEW MOVIE</h1>
-
-      <Form className="movie-form" size="massive" onSubmit={handleSubmit}>
-        <Form.Input
-          fluid
-          label="Title"
-          placeholder="Title"
-          type="text"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-          required
-        />
-        <Form.Group widths="equal">
+      <Segment inverted>
+        <h1>New Movie Form</h1>
+      </Segment>
+      <Segment>
+        <Form className="movie-form" size="massive" onSubmit={handleSubmit}>
           <Form.Input
             fluid
-            label="Original Title"
-            placeholder="Original Title Japanese"
+            label="Title"
+            placeholder="Title"
             type="text"
-            name="original_title"
-            value={formData.original_title}
+            name="title"
+            value={formData.title}
             onChange={handleChange}
             required
           />
-          <Form.Input
-            fluid
-            label="Original Title Romanised"
-            placeholder="Original Title Romanised"
+          <Form.Group widths="equal">
+            <Form.Input
+              fluid
+              label="Original Title"
+              placeholder="Original Title Japanese"
+              type="text"
+              name="original_title"
+              value={formData.original_title}
+              onChange={handleChange}
+              required
+            />
+            <Form.Input
+              fluid
+              label="Original Title Romanised"
+              placeholder="Original Title Romanised"
+              type="text"
+              name="original_title_romanised"
+              value={formData.original_title_romanised}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group widths="equal">
+            <Form.Input
+              fluid
+              label="Movie Image"
+              placeholder="Movie Image"
+              type="text"
+              name="image"
+              value={formData.image}
+              onChange={handleChange}
+              required
+            />
+            <Form.Input
+              fluid
+              label="Movie Banner"
+              placeholder="Movie Banner"
+              type="text"
+              name="movie_banner"
+              value={formData.movie_banner}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.TextArea
+            label="Description"
+            placeholder="Tell us more about movie..."
             type="text"
-            name="original_title_romanised"
-            value={formData.original_title_romanised}
+            name="description"
+            value={formData.description}
             onChange={handleChange}
             required
           />
-        </Form.Group>
-        <Form.Group widths="equal">
-          <Form.Input
-            fluid
-            label="Movie Image"
-            placeholder="Movie Image"
-            type="text"
-            name="image"
-            value={formData.image}
-            onChange={handleChange}
-            required
-          />
-          <Form.Input
-            fluid
-            label="Movie Banner"
-            placeholder="Movie Banner"
-            type="text"
-            name="movie_banner"
-            value={formData.movie_banner}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-        <Form.TextArea
-          label="Description"
-          placeholder="Tell us more about movie..."
-          type="text"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          required
-        />
-        <Form.Group widths="equal">
-          <Form.Input
-            fluid
-            label="Director"
-            placeholder="Director Name"
-            type="text"
-            name="director"
-            value={formData.director}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="Producer"
-            placeholder="Producer Name"
-            type="text"
-            name="producer"
-            value={formData.producer}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group widths="equal">
-          <Form.Input
-            fluid
-            label="Release Year"
-            min="1950"
-            max="2023"
-            placeholder="Release Year"
-            type="number"
-            name="release_year"
-            value={formData.release_year}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="Running Time"
-            min="0"
-            placeholder="Running Time"
-            type="number"
-            name="running_time"
-            value={formData.running_time}
-            onChange={handleChange}
-          />
-          <Form.Input
-            fluid
-            label="Rating"
-            min="0"
-            max="100"
-            placeholder="Rating"
-            type="number"
-            name="rt_score"
-            value={formData.rt_score}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Button fluid circular color="instagram">
-          Submit
-        </Form.Button>
-      </Form>
+          <Form.Group widths="equal">
+            <Form.Input
+              fluid
+              label="Director"
+              placeholder="Director Name"
+              type="text"
+              name="director"
+              value={formData.director}
+              onChange={handleChange}
+            />
+            <Form.Input
+              fluid
+              label="Producer"
+              placeholder="Producer Name"
+              type="text"
+              name="producer"
+              value={formData.producer}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group widths="equal">
+            <Form.Input
+              fluid
+              label="Release Year"
+              min="1950"
+              max="2023"
+              placeholder="Release Year"
+              type="number"
+              name="release_year"
+              value={formData.release_year}
+              onChange={handleChange}
+            />
+            <Form.Input
+              fluid
+              label="Running Time"
+              min="0"
+              placeholder="Running Time"
+              type="number"
+              name="running_time"
+              value={formData.running_time}
+              onChange={handleChange}
+            />
+            <Form.Input
+              fluid
+              label="Rating"
+              min="0"
+              max="100"
+              placeholder="Rating"
+              type="number"
+              name="rt_score"
+              value={formData.rt_score}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Button fluid circular color="instagram">
+            Submit
+          </Form.Button>
+        </Form>
+      </Segment>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.css";
+import { Image } from "semantic-ui-react";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home-container">
+      <img className="home-img" src="" />
       <p>
         Studio Ghibli is a renowned Japanese animation film studio known for
         creating critically acclaimed and visually stunning animated movies. It

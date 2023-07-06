@@ -13,22 +13,31 @@ body {
 li {
   list-style: none;
 }
+.logo {
+  margin-right: 0.5rem;
+}
 .nav-link,
 .brand {
   text-decoration: none;
-  color: darkgray;
+  color: #ffff;
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 8vh;
-  background: rgb(0, 28, 73);
+  height: 80px;
+  background: #101522;
+  font-size: 1.2em;
 }
 .nav-brand {
-  text-transform: uppercase;
+  color: #ffff;
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
   font-weight: bolder;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 .nav-menu {
   display: flex;
