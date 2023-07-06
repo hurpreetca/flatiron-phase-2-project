@@ -1,3 +1,6 @@
+.movie-detail-div {
+  height: 100vh;
+}
 .movie-detail-card {
   opacity: 0.9;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
