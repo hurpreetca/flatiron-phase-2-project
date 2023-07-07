@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="nav">
       <Link to="/" className="nav-brand">
         <SiThemoviedatabase className="logo" />
-        GHIBLI
+        GHIBLI Archive
       </Link>
       <ul className="nav-menu">
         <li className="nav-item">
