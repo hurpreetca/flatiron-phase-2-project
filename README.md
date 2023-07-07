@@ -9,8 +9,8 @@ A website to go through the archives of Ghibli Studio which further contains inf
 ## Location/Installation
 
 This project has been deployed. You can find the front-end and back-end on below following links:<br> <br>
-**Front-end**: <br>
-**Back-end**: <br><br>
+**Front-end**: https://phase-2-ghibli-achives.netlify.app<br>
+**Back-end**: https://phase2ghibliarchives.onrender.com <br><br>
 In case, you want to install it locally: <br><br>
 **Github Front-end**: https://github.com/hurpreetca/flatiron-phase-2-project <br>
 **Github Back-end**: https://github.com/hurpreetca/json-server-template/tree/main <br><br>
@@ -69,4 +69,5 @@ I've also experienced issues preventing the proper loading of images. Ideally, i
 - https://react-icons.github.io/react-icons/: for the icon used with the logo.
 - https://ghibliapi.vercel.app: for the api from where the displayed data is collected.
 - https://www.ghibli.jp: for the images used.
+- https://www.netlify.com/ and https://render.com/ : for hosting my front-end and back-end.
 - Thanks to all the teachers for their continous support and guidance. This would have never been possible without you all.
