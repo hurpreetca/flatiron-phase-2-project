@@ -53,7 +53,7 @@ function NewMovieForm({ onNewMovieSubmit }) {
     //console.log(newMovieData);
 
     //POST request to update the list of movies
-    fetch("http://localhost:3000/movies", {
+    fetch("https://phase2ghibliarchives.onrender.com/movies", {
       method: "POST",
       headers: {
         accept: "application/json",

@@ -9,7 +9,7 @@ function GhibliMovieDetails() {
   const [selectedMovie, setSelectedMovie] = useState({});
   console.log("Running mvies Details" + id);
   useEffect(() => {
-    fetch(`http://localhost:3000/movies/${id}`)
+    fetch(`https://phase2ghibliarchives.onrender.com/movies/${id}`)
       .then((res) => res.json())
       .then((movie) => setSelectedMovie(movie));
   }, [id]);

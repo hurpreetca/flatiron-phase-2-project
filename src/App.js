@@ -10,7 +10,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/movies")
+    fetch("https://phase2ghibliarchives.onrender.com/movies")
       .then((res) => res.json())
       .then((movie) => setMovies(movie));
   }, []);
